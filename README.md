@@ -5,8 +5,9 @@
 2) Clone this repository
 3) Navigate to root
 4) Copy the .env.example and create a new .env file (`cp .env.example .env`)
-5) `./vendor/bin/sail up -d`
-6) `./vendor/bin/sail up artisan migrate`
+5) `composer update`
+6) `./vendor/bin/sail up -d`
+7) `./vendor/bin/sail artisan migrate`
 
 ### Requirements
 The challenge will contain a few core features most applications have. That includes connecting to an API, basic MVC using Laravel, exposing an API, and finally, tests.
