@@ -32,6 +32,9 @@ To run feature and unit tests.
 php artisan test
 ```
 
+### Auth
+Typically would use Laravel Sanctum, however for the purpose of the test I've added Middleware which checks if the given **bearer token** matches **API_TOKEN** from the env file.
+
 ### Endpoints
 
 **GET /**
