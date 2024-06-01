@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Quotes\Facades\Quotes;
 use App\Http\Resources\QuoteResource;
+use Illuminate\Http\Request;
 
 class QuotesController extends Controller
 {

@@ -26,6 +26,32 @@ The API we want you to connect to is https://kanye.rest/
 - Implementation of API using Laravel Manager Design Pattern.
 - Making third-party API response quick by cache.
 
+### Tests
+To run feature and unit tests.
+```
+php artisan test
+```
+
 ### Endpoints
 
-http://127.0.0.1:8888/
+**GET /**
+- **Description:** Retrieve 5 random Kanye West quotes. Results are cached for 15 minutes unless refreshed.
+- **URL:** `http://127.0.0.1:8888/`
+- **Method:** GET
+- **Authentication:** Requires API token in the `Authorization` header as a Bearer token.
+- **Response:** Returns a JSON array with 5 random quotes.
+- **Example Request:**
+```sh
+  curl -H "Authorization: Bearer YOUR_API_TOKEN" http://127.0.0.1:8888/quotes
+```
+
+**GET /refresh**
+- **Description:** Refresh cache and retrieve 5 new random Kanye West quotes.
+- **URL:** `http://127.0.0.1:8888/refresh`
+- **Method:** GET
+- **Authentication:** Requires API token in the `Authorization` header as a Bearer token.
+- **Response:** Returns a JSON array with 5 random quotes.
+- **Example Request:**
+```sh
+  curl -H "Authorization: Bearer YOUR_API_TOKEN" http://127.0.0.1:8888/refresh
+```
